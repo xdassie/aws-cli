@@ -19,3 +19,7 @@ cat > /tmp/r53-update.json << __EOF__
     ]
   }
 __EOF__
+ aws route53 change-resource-record-sets \
+        --hosted-zone-id Z1N58P3U3JSQJ1 \
+        --change-batch file:///tmp/r53-update.json
+        
