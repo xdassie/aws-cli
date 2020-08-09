@@ -10,5 +10,5 @@ RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git; \
  make install; \
  rm -rf /var/cache/apk/*;
 
-#COPY docker-entrypoint.sh /
+COPY s3fs.sh /
 ENTRYPOINT ["/bin/sh"]
