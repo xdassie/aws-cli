@@ -1,3 +1,4 @@
+#!/bin/sh
 RPI_EXT_IP=$(ip addr list enp2s0 |grep "inet " |cut -d' ' -f6|cut -d/ -f1)
 
 cat > /tmp/r53-update.json << __EOF__
