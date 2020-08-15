@@ -12,4 +12,6 @@ RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git; \
 
 COPY s3sync.sh /
 RUN chmod 500 /s3sync.sh
+VOLUME ["/encrypted"]
+VOLUME ["/clear"]
 ENTRYPOINT ["/s3sync.sh"]
