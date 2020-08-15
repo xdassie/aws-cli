@@ -11,4 +11,5 @@ RUN git clone https://github.com/s3fs-fuse/s3fs-fuse.git; \
  rm -rf /var/cache/apk/*;
 
 COPY s3sync.sh /
+RUN chmod 500 /s3sync.sh
 ENTRYPOINT ["/s3sync.sh"]
