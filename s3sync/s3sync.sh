@@ -6,4 +6,4 @@ export AWS_SECRET_ACCESS_KEY
 mkdir -p /encrypted 
 mkdir -p /tmp/clear 
 s3fs -d -o endpoint="af-south-1" -o url="https://s3.af-south-1.amazonaws.com" "$BUCKET:/$BUCKETPATH" /encrypted && encfs /encrypted /tmp/clear
-while true; do echo "syncing encrytped filesystem with s3"; sleep 60; done;
+while true; do echo "syncing encrytped filesystem with s3"; rsync -a --progress /source /tmp/clear/backup/; sleep 60; done;
