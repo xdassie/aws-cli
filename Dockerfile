@@ -1,6 +1,6 @@
 FROM quay.io/xdassie/python3.7:latest
 RUN apk -v --update add \
-        python \
+        python3 \
         py-pip \
         groff \
         less \
